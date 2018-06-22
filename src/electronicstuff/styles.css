@@ -1,0 +1,195 @@
+/************************************************
+ *  PALETA DE CORES                             *
+ *      #666666 - Cinza claro                   *
+ *      #333333 - Cinza escuro                  *
+ *      #e8e8e8 - Creme escuro                  *
+ *      #fafafa - Creme claro                   *
+ *      #950005 - Vermelho                      *
+ *      #ffffff - Branco                        *
+ *      #000000 - Preto                         *
+ *                                              *
+ *                                              *
+ *                                              *
+ *                                              *
+ *                                              *
+/* -----TAB PANE ------------------------------------*/
+        .mainTabPane {
+        /* -fx-tab-min-width: 4.583em;  55 */
+        /* -fx-tab-max-width: 4.583em; 55 */
+        -fx-tab-min-height: 2em; /* 24 */
+        -fx-tab-max-height: 2em; /* 24 */
+        -fx-background-image: url("media/bgGradiente.jpg");
+        -fx-background-repeat: no-repeat;
+        /*-fx-background-size: 910,910;*/
+
+        }
+
+        /* Rótulo das abas do top */
+        .tab:top .tab-label  {
+
+        -fx-background-color: transparent;
+        -fx-alignment: CENTER;
+        -fx-text-fill:	#000000;
+        }
+
+        /* Dentro do espaço do conteúdo da aba*/
+        .tab-content-area {
+        -fx-background-color: null;
+        -fx-padding: 0.0em; /* 0 */
+        /* -fx-opacity: -fx-disabled-opacity;*/
+
+        }
+
+        /*Aba genérica*/
+        .tab {
+        -fx-background-insets: 0, 1, 2;
+        -fx-background-radius: 5 5 0 0, 4 4 0 0, 3 3 0 0;
+        -fx-padding: 0.1em 0.3em 0.1em 0.3em; /* em cima, direita, embaixo, esquerda */
+        }
+
+        /*Abas que estão configuradas para ficar no top*/
+        .tab:top {
+        -fx-background-color: #666666; /*Cinza claro*/
+
+        }
+        /*Abas que estão configuradas para ficar na esquerda*/
+        .tab:left {
+        -fx-background-color: #666666; /*Cinza claro*/
+        -fx-text-fill: #fafafa; /*Branco*/
+        -fx-padding:10px;
+
+        }
+        /*Abas CLICADAS que estão configuradas para ficar na esquerda*/
+        .tab:left:selected {
+        -fx-background-color: #950005; /*Vermelho*/
+        }
+
+        /*Abas CLICADAS que estão configuradas para ficar no top*/
+        .tab:top:selected {
+        -fx-background-color: #ffffff; /*Cinza escuro*/
+
+        }
+
+        /* Rótulos das abas CLICADAS que estão configuradas para ficar no top */
+        .tab:top:selected .tab-label {
+        -fx-text-fill: #950005;
+        -fx-font-weight: bold;
+
+        }
+
+        /*Background por trás das abas*/
+        .tab-pane *.tab-header-background {
+        -fx-background-color: black; /* #e8e8e8 */
+        }
+
+        .tab-pane:top *.tab-header-area {
+        -fx-background-insets: 0, 0 0 1 0;
+        -fx-padding: 0em 0em 0.0em 0em; /* 5 2 0 10 */
+        }
+
+        .tab-pane:left *.tab-header-area {
+        -fx-background-insets: 0, 0 1 0 0;
+        -fx-padding: 2em 0em 0em 0em; /* 10 0 2 5 */
+        }
+
+/* ---- DIALOGS --------------------------------- */
+
+        .alert:header .header-panel .label {
+            -fx-font-weight: bold;
+        }
+
+/* ---- MENUS DE CORES DOS RESISTORES --------------------------------- */
+
+        .choice-box {
+            -fx-background-color: #000000; /* Background da caixa principal (fechada) */
+            -fx-mark-color: #950005; /* arrow color */
+        }
+
+        .choice-box .label {
+            -fx-text-fill: #ffffff;   /* Cor do texto do item selecionado na caixa fechada */
+            -fx-alignment: center;
+        }
+
+        .choice-box .context-menu {
+            -fx-background-color: #666666;    /* Background do menu que desce */
+        }
+
+        .choice-box .menu-item:focused {
+            -fx-background-color: #950005;   /* Background do item focado com o mouse */
+        }
+
+        .choice-box .menu-item > .label {
+            -fx-text-fill: #000000;   /* Cor do texto dos itens não focados com o mouse */
+        }
+
+        .choice-box .menu-item:focused > .label {
+            -fx-text-fill: #ffffff;   /* Cor do texto dos itens focados com o mouse */
+        }
+
+        /* #####################################  */
+
+         .itemCorEscura .label {
+            -fx-text-fill: #ffffff;   /* Cor do texto do item selecionado na caixa fechada */
+        }
+
+        /* ######################################  */
+
+        .itemCorClara .label {
+            -fx-text-fill: #000000;   /* Cor do texto do item selecionado na caixa fechada */
+        }
+
+
+
+/* ---- BOTÕES ------------------------------------*/
+
+        .button {
+            -fx-background-color: #950005;
+
+        }
+
+        .button .focused {
+            -fx-background-color: #d20007;
+        }
+
+        .button:hover {
+            -fx-background-color: #b20409;
+        }
+
+/* ---- TABELA BOMLIST ------------------------------------*/
+        .table-view {
+            -fx-background-color: transparent;
+            -fx-text-fill: white;
+        }
+
+        .table-view .column-header {
+             -fx-background-color: 	#000000;
+             -fx-text-fill: white;
+             -fx-border: 6px;
+             -fx-border-color: white;
+         }
+
+         .table-view .column-header-background .label{
+             -fx-text-fill: white;
+         }
+
+        .table-view .table-cell{
+            -fx-text-fill: #3c455c;
+        }
+        .table-row-cell{
+            -fx-background-color: transparent; /* #ececec */
+            -fx-background-insets: 0, 0 0 1 0;
+            -fx-padding: 0.0em;
+             -fx-border-color: grey;
+        }
+        .table-row-cell:odd{
+            -fx-background-color: transparent; /* #dfdfdf */
+            -fx-background-insets: 0, 0 0 1 0;
+            -fx-padding: 0.0em;
+        }
+
+        .table-row-cell:selected {
+            -fx-background-color: #f4eb21;
+            -fx-background-insets: 0;
+            -fx-background-radius: 1;
+            -fx-text-fill: white;
+        }

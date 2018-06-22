@@ -1,0 +1,702 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<TabPane fx:id="outerTabPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" side="LEFT" styleClass="mainTabPane" stylesheets="@styles.css" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="electronicstuff.MainFrameController">
+  <tabs>
+    <Tab closable="false" styleClass="tabResistor">
+         <content>
+            <TabPane prefHeight="200.0" prefWidth="200.0" styleClass="resTabPane" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab closable="false" styleClass="tabR4" text="4 CORES">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="284.0" prefWidth="856.0">
+                           <children>
+                              <ImageView fitHeight="130.0" fitWidth="923.0" layoutY="104.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@media/res4faixas.png" />
+                                 </image>
+                              </ImageView>
+                              <Text fill="#9d9d9d" layoutX="341.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1ª" textAlignment="CENTER" wrappingWidth="29.173828125">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="#9d9d9d" layoutX="383.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2ª" textAlignment="CENTER" wrappingWidth="29.173828125">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="#9d9d9d" layoutX="423.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="M" textAlignment="CENTER" wrappingWidth="29.173828125">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="#9d9d9d" layoutX="579.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" text="T" textAlignment="CENTER" wrappingWidth="29.173828125">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Text>
+                              <Rectangle fx:id="r4f1" arcHeight="5.0" arcWidth="5.0" height="76.0" layoutX="341.0" layoutY="126.0" stroke="TRANSPARENT" strokeType="INSIDE" strokeWidth="0.0" width="27.0" />
+                              <Rectangle fx:id="r4f2" arcHeight="5.0" arcWidth="5.0" height="76.0" layoutX="383.0" layoutY="126.0" stroke="TRANSPARENT" strokeType="INSIDE" strokeWidth="0.0" width="27.0" />
+                              <Rectangle fx:id="r4f3" arcHeight="5.0" arcWidth="5.0" height="76.0" layoutX="424.0" layoutY="126.0" stroke="TRANSPARENT" strokeType="INSIDE" strokeWidth="0.0" width="27.0" />
+                              <Rectangle fx:id="r4f4" arcHeight="5.0" arcWidth="5.0" height="86.0" layoutX="580.0" layoutY="121.0" stroke="TRANSPARENT" strokeType="INSIDE" strokeWidth="0.0" width="27.0" />
+                              <HBox alignment="CENTER" layoutY="261.0" prefHeight="71.0" prefWidth="864.0" styleClass="menuBox">
+                                 <children>
+                                    <VBox alignment="CENTER" minWidth="-Infinity" prefHeight="100.0" prefWidth="150.0">
+                                       <children>
+                                          <Label text="1ª BANDA:" textAlignment="CENTER" textFill="#666666">
+                                             <VBox.margin>
+                                                <Insets />
+                                             </VBox.margin>
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <ChoiceBox fx:id="menuR4F1" accessibleRole="TOOLTIP" accessibleText="Selecionar a cor da 1ª faixa do resistorsData" prefWidth="150.0">
+                                             <VBox.margin>
+                                                <Insets top="10.0" />
+                                             </VBox.margin>
+                                          </ChoiceBox>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="20.0" right="10.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox alignment="CENTER" minWidth="-Infinity" prefHeight="100.0" prefWidth="150.0">
+                                       <children>
+                                          <Label text="2ª BANDA:" textAlignment="CENTER" textFill="#666666">
+                                             <VBox.margin>
+                                                <Insets />
+                                             </VBox.margin>
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <ChoiceBox fx:id="menuR4F2" accessibleRole="TOOLTIP" accessibleText="Selecionar a cor da 1ª faixa do resistorsData" prefWidth="150.0" stylesheets="@styles.css">
+                                             <VBox.margin>
+                                                <Insets top="10.0" />
+                                             </VBox.margin>
+                                          </ChoiceBox>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="10.0" right="10.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox alignment="CENTER" minWidth="-Infinity" prefHeight="100.0" prefWidth="150.0">
+                                       <children>
+                                          <Label text="MULTIPLICADOR:" textAlignment="CENTER" textFill="#666666">
+                                             <VBox.margin>
+                                                <Insets />
+                                             </VBox.margin>
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <ChoiceBox fx:id="menuR4F3" accessibleRole="TOOLTIP" accessibleText="Selecionar a cor da 1ª faixa do resistorsData" prefWidth="150.0">
+                                             <VBox.margin>
+                                                <Insets top="10.0" />
+                                             </VBox.margin>
+                                          </ChoiceBox>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="10.0" right="10.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox alignment="CENTER" minWidth="-Infinity" prefHeight="100.0" prefWidth="150.0">
+                                       <children>
+                                          <Label text="TOLERÂNCIA:" textAlignment="CENTER" textFill="#666666">
+                                             <VBox.margin>
+                                                <Insets />
+                                             </VBox.margin>
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <ChoiceBox fx:id="menuR4F4" accessibleRole="TOOLTIP" accessibleText="Selecionar a cor da 1ª faixa do resistorsData" prefWidth="150.0">
+                                             <VBox.margin>
+                                                <Insets top="10.0" />
+                                             </VBox.margin>
+                                          </ChoiceBox>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="10.0" right="20.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" layoutX="-1.0" layoutY="4.0" prefHeight="70.0" prefWidth="859.0">
+                                 <children>
+                                    <VBox alignment="CENTER" prefHeight="70.0" prefWidth="463.0">
+                                       <children>
+                                          <Label text="RESISTÊNCIA:" textFill="#ffed90">
+                                             <font>
+                                                <Font name="Arial Bold" size="24.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="labelR4" text="VALOR" textFill="#575757">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" layoutX="-1.0" layoutY="535.0" prefHeight="39.0" prefWidth="858.0">
+                                 <children>
+                                    <VBox alignment="CENTER" prefHeight="39.0" prefWidth="331.0">
+                                       <children>
+                                          <Label prefHeight="17.0" prefWidth="193.0" text="Desenvolvido por Marcelino Borges" textAlignment="CENTER" />
+                                          <Label prefHeight="17.0" prefWidth="245.0" text="contato@engenheirosdacomputacao.com.br" textAlignment="CENTER" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" layoutY="469.0" prefHeight="61.0" prefWidth="857.0">
+                                 <children>
+                                    <Button fx:id="botaoArmazenarR4" mnemonicParsing="false" prefWidth="100.0" text="Armazenar" textFill="WHITE">
+                                       <HBox.margin>
+                                          <Insets right="10.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <Button fx:id="botaoLimparR4" mnemonicParsing="false" prefWidth="100.0" text="Limpar" textFill="WHITE">
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <Label alignment="CENTER" contentDisplay="CENTER" layoutX="320.0" layoutY="244.0" text="Sei as cores, quero apenas a resistência!" textAlignment="CENTER" textFill="#940007">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <HBox alignment="CENTER" layoutY="381.0" prefHeight="71.0" prefWidth="863.0" styleClass="menuBox">
+                                 <children>
+                                    <VBox alignment="CENTER" minWidth="-Infinity" prefHeight="100.0" prefWidth="150.0">
+                                       <children>
+                                          <Label text="1ª DÍGITO:" textAlignment="CENTER" textFill="#666666">
+                                             <VBox.margin>
+                                                <Insets />
+                                             </VBox.margin>
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <ChoiceBox fx:id="menuR4Num1" accessibleRole="TOOLTIP" accessibleText="Selecionar a cor da 1ª faixa do resistorsData" prefWidth="150.0">
+                                             <VBox.margin>
+                                                <Insets top="10.0" />
+                                             </VBox.margin>
+                                          </ChoiceBox>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="20.0" right="10.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox alignment="CENTER" minWidth="-Infinity" prefHeight="100.0" prefWidth="150.0">
+                                       <children>
+                                          <Label text="2ª DÍGITO:" textAlignment="CENTER" textFill="#666666">
+                                             <VBox.margin>
+                                                <Insets />
+                                             </VBox.margin>
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <ChoiceBox fx:id="menuR4Num2" accessibleRole="TOOLTIP" accessibleText="Selecionar a cor da 1ª faixa do resistorsData" prefWidth="150.0" stylesheets="@styles.css">
+                                             <VBox.margin>
+                                                <Insets top="10.0" />
+                                             </VBox.margin>
+                                          </ChoiceBox>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="10.0" right="10.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox alignment="CENTER" minWidth="-Infinity" prefHeight="100.0" prefWidth="150.0">
+                                       <children>
+                                          <Label text="MULTIPLICADOR:" textAlignment="CENTER" textFill="#666666">
+                                             <VBox.margin>
+                                                <Insets />
+                                             </VBox.margin>
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <ChoiceBox fx:id="menuR4Mult" accessibleRole="TOOLTIP" accessibleText="Selecionar a cor da 1ª faixa do resistorsData" prefWidth="150.0">
+                                             <VBox.margin>
+                                                <Insets top="10.0" />
+                                             </VBox.margin>
+                                          </ChoiceBox>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="10.0" right="10.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox alignment="CENTER" minWidth="-Infinity" prefHeight="100.0" prefWidth="150.0">
+                                       <children>
+                                          <Label text="TOLERÂNCIA:" textAlignment="CENTER" textFill="#666666">
+                                             <VBox.margin>
+                                                <Insets />
+                                             </VBox.margin>
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <ChoiceBox fx:id="menuR4Tol" accessibleRole="TOOLTIP" accessibleText="Selecionar a cor da 1ª faixa do resistorsData" prefWidth="150.0">
+                                             <VBox.margin>
+                                                <Insets top="10.0" />
+                                             </VBox.margin>
+                                          </ChoiceBox>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="10.0" right="20.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <Label alignment="CENTER" contentDisplay="CENTER" layoutX="320.0" layoutY="373.0" text="Sei a resistência, quero apenas as cores!" textAlignment="CENTER" textFill="#950005">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab closable="false" styleClass="tabR5" text="5 CORES">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Group layoutY="164.1015625">
+                                 <children>
+                                    <ImageView fitHeight="125.0" fitWidth="923.0" layoutY="-60.1015625" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@media/res5faixas.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Text fill="#9d9d9d" layoutX="292.0" layoutY="-49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1ª" textAlignment="CENTER" wrappingWidth="29.173828125">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fill="#9d9d9d" layoutX="338.0" layoutY="-48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2ª" textAlignment="CENTER" wrappingWidth="29.173828125">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fill="#9d9d9d" layoutX="384.0" layoutY="-49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3ª" textAlignment="CENTER" wrappingWidth="29.173828125">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fill="#9d9d9d" layoutX="430.0" layoutY="-49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="M" textAlignment="CENTER" wrappingWidth="29.173828125">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Text>
+                                    <Rectangle fx:id="r5f2" arcHeight="5.0" arcWidth="5.0" fill="#ffaa00" height="74.0" layoutX="338.0" layoutY="-36.1015625" stroke="TRANSPARENT" strokeType="INSIDE" strokeWidth="0.0" width="26.0" />
+                                    <Rectangle fx:id="r5f1" arcHeight="5.0" arcWidth="5.0" fill="#ffaa00" height="86.0" layoutX="291.0" layoutY="-42.1015625" stroke="TRANSPARENT" strokeType="INSIDE" strokeWidth="0.0" width="27.0" />
+                                    <Rectangle fx:id="r5f3" arcHeight="5.0" arcWidth="5.0" fill="#ffaa00" height="74.0" layoutX="384.0" layoutY="-36.1015625" stroke="TRANSPARENT" strokeType="INSIDE" strokeWidth="0.0" width="26.0" />
+                                    <Rectangle fx:id="r5f4" arcHeight="5.0" arcWidth="5.0" fill="#ffaa00" height="74.0" layoutX="431.0" layoutY="-36.1015625" stroke="TRANSPARENT" strokeType="INSIDE" strokeWidth="0.0" width="26.0" />
+                                    <Rectangle fx:id="r5f5" arcHeight="5.0" arcWidth="5.0" fill="#ffaa00" height="86.0" layoutX="580.0" layoutY="-42.1015625" stroke="TRANSPARENT" strokeType="INSIDE" strokeWidth="0.0" width="26.0" />
+                                    <Text fill="#9d9d9d" layoutX="578.0" layoutY="-50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="T" textAlignment="CENTER" wrappingWidth="29.173828125">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </Group>
+                              <HBox alignment="CENTER" layoutY="260.0" minWidth="-Infinity" prefHeight="71.0" prefWidth="859.0" styleClass="menuBox">
+                                 <children>
+                                    <VBox alignment="CENTER" minWidth="-Infinity" prefHeight="100.0" prefWidth="150.0">
+                                       <children>
+                                          <Label text="1ª BANDA:" textAlignment="CENTER" textFill="#6b6b6b">
+                                             <VBox.margin>
+                                                <Insets />
+                                             </VBox.margin>
+                                          </Label>
+                                          <ChoiceBox fx:id="menuR5F1" accessibleHelp="Selecionar a cor da 1ª faixa do resistorsData" minWidth="-Infinity" prefWidth="150.0">
+                                             <VBox.margin>
+                                                <Insets top="10.0" />
+                                             </VBox.margin>
+                                          </ChoiceBox>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="20.0" right="10.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox alignment="CENTER" minWidth="-Infinity" prefHeight="100.0" prefWidth="150.0">
+                                       <children>
+                                          <Label text="2ª BANDA:" textAlignment="CENTER" textFill="#6b6b6b">
+                                             <VBox.margin>
+                                                <Insets />
+                                             </VBox.margin>
+                                          </Label>
+                                          <ChoiceBox fx:id="menuR5F2" accessibleHelp="Selecionar a cor da 2ª faixa do resistorsData" minWidth="-Infinity" prefWidth="150.0">
+                                             <VBox.margin>
+                                                <Insets top="10.0" />
+                                             </VBox.margin>
+                                          </ChoiceBox>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="10.0" right="10.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox alignment="CENTER" minWidth="-Infinity" prefHeight="100.0" prefWidth="150.0">
+                                       <children>
+                                          <Label text="3ª BANDA:" textAlignment="CENTER" textFill="#6b6b6b">
+                                             <VBox.margin>
+                                                <Insets />
+                                             </VBox.margin>
+                                          </Label>
+                                          <ChoiceBox fx:id="menuR5F3" accessibleHelp="Selecionar a cor da 3ª faixa do resistorsData" minWidth="-Infinity" prefWidth="150.0">
+                                             <VBox.margin>
+                                                <Insets top="10.0" />
+                                             </VBox.margin>
+                                          </ChoiceBox>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="10.0" right="10.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox alignment="CENTER" minWidth="-Infinity" prefHeight="100.0" prefWidth="150.0">
+                                       <children>
+                                          <Label text="MULTIPLICADOR:" textAlignment="CENTER" textFill="#6b6b6b">
+                                             <VBox.margin>
+                                                <Insets />
+                                             </VBox.margin>
+                                          </Label>
+                                          <ChoiceBox fx:id="menuR5F4" accessibleHelp="Selecionar a cor da 4ª faixa (multiplicador) do resistorsData" minWidth="-Infinity" prefWidth="150.0">
+                                             <VBox.margin>
+                                                <Insets top="10.0" />
+                                             </VBox.margin>
+                                          </ChoiceBox>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="10.0" right="10.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox alignment="CENTER" minWidth="-Infinity" prefHeight="100.0" prefWidth="150.0">
+                                       <children>
+                                          <Label text="TOLERÂNCIA:" textAlignment="CENTER" textFill="#6b6b6b">
+                                             <VBox.margin>
+                                                <Insets />
+                                             </VBox.margin>
+                                          </Label>
+                                          <ChoiceBox fx:id="menuR5F5" accessibleHelp="Selecionar a cor da 5ª faixa (tolerância) do resistorsData" minWidth="-Infinity" prefWidth="150.0">
+                                             <VBox.margin>
+                                                <Insets top="10.0" />
+                                             </VBox.margin>
+                                          </ChoiceBox>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="10.0" right="20.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" layoutX="-1.0" layoutY="382.0" minWidth="-Infinity" prefHeight="71.0" prefWidth="859.0" styleClass="menuBox">
+                                 <children>
+                                    <VBox alignment="CENTER" minWidth="-Infinity" prefHeight="100.0" prefWidth="150.0">
+                                       <children>
+                                          <Label text="1ª BANDA:" textAlignment="CENTER" textFill="#6b6b6b">
+                                             <VBox.margin>
+                                                <Insets />
+                                             </VBox.margin>
+                                          </Label>
+                                          <ChoiceBox fx:id="menuR5Num1" accessibleHelp="Selecionar a cor da 1ª faixa do resistorsData" minWidth="-Infinity" prefWidth="150.0">
+                                             <VBox.margin>
+                                                <Insets top="10.0" />
+                                             </VBox.margin>
+                                          </ChoiceBox>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="20.0" right="10.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox alignment="CENTER" minWidth="-Infinity" prefHeight="100.0" prefWidth="150.0">
+                                       <children>
+                                          <Label text="2ª BANDA:" textAlignment="CENTER" textFill="#6b6b6b">
+                                             <VBox.margin>
+                                                <Insets />
+                                             </VBox.margin>
+                                          </Label>
+                                          <ChoiceBox fx:id="menuR5Num2" accessibleHelp="Selecionar a cor da 2ª faixa do resistorsData" minWidth="-Infinity" prefWidth="150.0">
+                                             <VBox.margin>
+                                                <Insets top="10.0" />
+                                             </VBox.margin>
+                                          </ChoiceBox>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="10.0" right="10.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox alignment="CENTER" minWidth="-Infinity" prefHeight="100.0" prefWidth="150.0">
+                                       <children>
+                                          <Label text="3ª BANDA:" textAlignment="CENTER" textFill="#6b6b6b">
+                                             <VBox.margin>
+                                                <Insets />
+                                             </VBox.margin>
+                                          </Label>
+                                          <ChoiceBox fx:id="menuR5Num3" accessibleHelp="Selecionar a cor da 3ª faixa do resistorsData" minWidth="-Infinity" prefWidth="150.0">
+                                             <VBox.margin>
+                                                <Insets top="10.0" />
+                                             </VBox.margin>
+                                          </ChoiceBox>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="10.0" right="10.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox alignment="CENTER" minWidth="-Infinity" prefHeight="100.0" prefWidth="150.0">
+                                       <children>
+                                          <Label text="MULTIPLICADOR:" textAlignment="CENTER" textFill="#6b6b6b">
+                                             <VBox.margin>
+                                                <Insets />
+                                             </VBox.margin>
+                                          </Label>
+                                          <ChoiceBox fx:id="menuR5Mult" accessibleHelp="Selecionar a cor da 4ª faixa (multiplicador) do resistorsData" minWidth="-Infinity" prefWidth="150.0">
+                                             <VBox.margin>
+                                                <Insets top="10.0" />
+                                             </VBox.margin>
+                                          </ChoiceBox>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="10.0" right="10.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox alignment="CENTER" minWidth="-Infinity" prefHeight="100.0" prefWidth="150.0">
+                                       <children>
+                                          <Label text="TOLERÂNCIA:" textAlignment="CENTER" textFill="#6b6b6b">
+                                             <VBox.margin>
+                                                <Insets />
+                                             </VBox.margin>
+                                          </Label>
+                                          <ChoiceBox fx:id="menuR5Tol" accessibleHelp="Selecionar a cor da 5ª faixa (tolerância) do resistorsData" minWidth="-Infinity" prefWidth="150.0">
+                                             <VBox.margin>
+                                                <Insets top="10.0" />
+                                             </VBox.margin>
+                                          </ChoiceBox>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="10.0" right="20.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" layoutY="4.0" prefHeight="70.0" prefWidth="857.0">
+                                 <children>
+                                    <VBox alignment="CENTER" prefHeight="70.0" prefWidth="865.0">
+                                       <children>
+                                          <Label text="RESISTÊNCIA:" textFill="#ffea81">
+                                             <font>
+                                                <Font name="Arial Bold" size="24.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="labelR5" text="VALOR" textFill="#575757">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" layoutY="535.0" prefHeight="39.0" prefWidth="857.0">
+                                 <children>
+                                    <VBox alignment="CENTER" prefHeight="39.0" prefWidth="331.0">
+                                       <children>
+                                          <Label prefHeight="17.0" prefWidth="193.0" text="Desenvolvido por Marcelino Borges" textAlignment="CENTER" />
+                                          <Label prefHeight="17.0" prefWidth="245.0" text="contato@engenheirosdacomputacao.com.br" textAlignment="CENTER" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" layoutY="469.0" prefHeight="61.0" prefWidth="858.0">
+                                 <children>
+                                    <Button fx:id="botaoArmazenarR5" mnemonicParsing="false" prefWidth="100.0" text="Armazenar" textFill="WHITE">
+                                       <HBox.margin>
+                                          <Insets right="10.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <Button fx:id="botaoLimparR5" mnemonicParsing="false" prefWidth="100.0" text="Limpar" textFill="WHITE">
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <Label layoutX="337.0" layoutY="239.0" text="QUERO APENAS A RESISTÊNCIA!" textAlignment="CENTER" textFill="#950005">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="354.0" layoutY="365.0" text="QUERO APENAS AS CORES!" textAlignment="CENTER" textFill="#950005">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                           </children></AnchorPane>
+                  </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+         </content>
+         <graphic>
+            <ImageView fitHeight="31.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@media/menu_resistor.png" />
+               </image>
+            </ImageView>
+         </graphic>
+    </Tab>
+    <Tab closable="false" styleClass="tabCapacitor">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <VBox alignment="TOP_CENTER" prefHeight="600.0" prefWidth="856.0">
+                     <children>
+                        <Label text="CAPACITOR:" textFill="#ffed90">
+                           <VBox.margin>
+                              <Insets bottom="50.0" top="20.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <HBox alignment="CENTER" prefHeight="410.0" prefWidth="856.0">
+                           <children>
+                              <GridPane alignment="CENTER" prefHeight="291.0" prefWidth="301.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <TextField fx:id="capNomenclatura" text="104" GridPane.columnIndex="1" />
+                                    <TextField fx:id="capCapacitancia" text="0.0000001" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <TextField fx:id="capCapacitanciaMicro" prefHeight="25.0" prefWidth="335.0" text="0.1" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                    <Label text="Nomenclatura:" textAlignment="RIGHT" />
+                                    <Label text="Capacitância:" GridPane.rowIndex="1" />
+                                    <Label text="Mili: " GridPane.rowIndex="2" />
+                                    <Label text="Micro:" GridPane.rowIndex="3" />
+                                    <TextField fx:id="capCapacitanciaMili" text="0.0001" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    <TextField fx:id="capCapacitanciaPico" text="100000" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                    <TextField fx:id="capCapacitanciaNano" text="100" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                    <Label text="Nano:" GridPane.rowIndex="4" />
+                                    <Label text="Pico:" GridPane.rowIndex="5" />
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="115.0" prefWidth="856.0">
+                           <children>
+                              <Button fx:id="botaoArmazenarCap" mnemonicParsing="false" prefWidth="100.0" text="Armazenar" textFill="WHITE">
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button fx:id="botaoLimparCap" mnemonicParsing="false" prefWidth="100.0" text="Limpar" textFill="WHITE">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="39.0" prefWidth="858.0">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="39.0" prefWidth="331.0">
+                                 <children>
+                                    <Label prefHeight="17.0" prefWidth="193.0" text="Desenvolvido por Marcelino Borges" textAlignment="CENTER" />
+                                    <Label prefHeight="17.0" prefWidth="245.0" text="contato@engenheirosdacomputacao.com.br" textAlignment="CENTER" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children></AnchorPane>
+      </content>
+         <graphic>
+            <ImageView fitHeight="70.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@media/menu_capacitor.png" />
+               </image>
+            </ImageView>
+         </graphic>
+    </Tab>
+      <Tab closable="false">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <VBox alignment="TOP_CENTER" prefHeight="600.0" prefWidth="857.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="27.0" prefWidth="855.0" text="COMPONENTES ARMAZENADOS NA LISTA DE COMPONENTES" textAlignment="CENTER" textFill="#950005">
+                           <VBox.margin>
+                              <Insets top="15.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="232.0" layoutY="30.0" prefHeight="17.0" prefWidth="857.0" text="Clique com o botoão direito sobre o componente para mais detalhes" textAlignment="CENTER" textFill="#5c5c5c">
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <TableView fx:id="bomList" prefHeight="549.0" prefWidth="857.0">
+                          <columns>
+                            <TableColumn fx:id="resistCol" editable="false" prefWidth="316.0" resizable="false" sortable="false" text="Resistor" />
+                              <TableColumn fx:id="materialCol" editable="false" prefWidth="239.0" sortable="false" text="Tipo" />
+                            <TableColumn fx:id="qtdCol" editable="false" minWidth="100.0" prefWidth="100.0" resizable="false" sortable="false" text="Qtd" />
+                              <TableColumn fx:id="tolCol" editable="false" minWidth="100.0" prefWidth="100.0" resizable="false" sortable="false" text="Tolerância (%)" />
+                              <TableColumn fx:id="potCol" editable="false" minWidth="100.0" prefWidth="100.0" resizable="false" sortable="false" text="Potência (W)" />
+                          </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+        </content>
+         <graphic>
+            <ImageView fitHeight="21.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@media/menu_lista.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Tab>
+  </tabs>
+</TabPane>
