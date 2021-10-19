@@ -1,3 +1,5 @@
+Project created to study Java and JavaFX during my early Computer Engineering college.
+
 At the beginning i created this program to be a resistor calculator to help electronic technicians, 
 students and engineers, where the user can inform the colors of the resistor he has on hands and 
 find out which value (Ohms) the component has or he can inform the value (Ohms) and get the related 
